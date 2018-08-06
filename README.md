@@ -2,7 +2,7 @@
 *******************
 Function main()
 *******************   
-    	Exercicio47()
+    	Exercicio56()
 *******************
 return nil
 
@@ -240,7 +240,8 @@ return nil
        
 ******* Exercicio 4.8 ***************
     Function Exercicio48()
-	    Local nQtdChoc:=0	    
+*************************************	    
+		 Local nQtdChoc:=0	    
 	    Local nVlChoc:=0	    
 	    Local nQtdRefri:=0	    
 	    Local nVlRefri:=0	    
@@ -250,10 +251,10 @@ return nil
 	    Local nVldSorteve:=0
 		 Local nValordaCompra:=0
 		 
-		 MsgGet("Exercicio 4.8","Informe a Quantidade de ",@nQtdChoc)	    
-		 MsgGet("Exercicio 4.8","Informe a Quantidade de ",@nQtdRefri)	    
-		 MsgGet("Exercicio 4.8","Informe a Quantidade de ",@nQtdMistoQuente)	    
-		 MsgGet("Exercicio 4.8","Informe a Quantidade de ",@nQtdSorteve)
+		 MsgGet("Exercicio 4.8","Informe a Quantidade de Chocolate",@nQtdChoc)	    
+		 MsgGet("Exercicio 4.8","Informe a Quantidade de Refrigerante",@nQtdRefri)	    
+		 MsgGet("Exercicio 4.8","Informe a Quantidade de Misto Quente",@nQtdMistoQuente)	    
+		 MsgGet("Exercicio 4.8","Informe a Quantidade de Sorvete",@nQtdSorteve)
 		 
 		 
 		 nVlChoc:= nQtdChoc*1.00
@@ -261,6 +262,126 @@ return nil
 		 nVlMistoQuente:= nQtdMistoQuente*3.00
 		 nVldSorteve:= nQtdSorteve*2.50
 		 nValordaCompra:= nVlChoc+nVlRefri+nVlMistoQuente+nVldSorteve
+		 
+		 MsgInfo("Total Chocolate: R$"+alltrim(STR(nVlChoc,10,2))+""+CRLF+"Total Refrigerante: R$"+alltrim(STR(nVlRefri,10,2))+""+CRLF+"Total Misto Quente: R$"+alltrim(STR(nVlMistoQuente,10,2))+""+CRLF+"Total Sorvete: R$"+alltrim(STR(nVldSorteve,10,2))+""+CRLF+"Total Consumo: R$"+alltrim(STR(nValordaCompra,10,2))+""+CRLF," Resultado")
+    Return Nil
+************* Exercicio 5.1 *****************     
+    Function Exercicio51()
+*********************************************       
+		 Local nInt := 0
+		 
+		 MsgGet("Exercicio 5.1","Informe um numero",@nInt)
+		 If nInt >= 0
+		 
+		 MsgInfo("O Numero: "+alltrim(STR(nInt,10,2))+" É Não Negativo","Resultado")
+		
+		 Else 
+		 If nInt < 0
+		 MsgInfo("O Numero: "+alltrim(STR(nInt,10,2))+" É Negativo","Resultado")
+       
+		 
+		 Endif    
+       Endif
+	 Return Nil
+***************** Exercicio 5.2 *******************	 
+	 Function Exercicio52()
+***************************************************       
+		 Local nInt := 0
+		 
+		 MsgGet("Exercicio 5.2","Informe um numero",@nInt)
+		 If nInt > 0
+		 
+		 MsgInfo("O Numero: "+alltrim(STR(nInt,10,2))+" É Positivo","Resultado")
+		
+		 Else 
+		 If nInt < 0
+		 MsgInfo("O Numero: "+alltrim(STR(nInt,10,2))+" É Negativo","Resultado")
+		 Else
+		 If nInt ==0
+		 MsgInfo("O Numero: "+alltrim(STR(nInt,10,2))+" É Zero","Resultado")
+       
+		 Endif
+		 Endif    
+       Endif
+	 Return Nil
+*********** Exercicio 5.3 ****************	 
+	 Function Exercicio53()
+******************************************       
+		 Local nInt := 0
+		 Local nInt2:= 0
+		 
+		 MsgGet("Exercicio 5.3","Informe um numero",@nInt)
+		 MsgGet("Exercicio 5.3","Informe um numero",@nInt2)
+		 If nInt > nInt2
+		 MsgInfo("O Numero: "+alltrim(STR(nInt,10,2))+" É maior","Resultado")
+		
+		 Elseif  nInt < nInt2
+		 MsgInfo("O Numero: "+alltrim(STR(nInt2,10,2))+" É Maior","Resultado")
+		 
+		 Elseif nInt == nInt2
+		 MsgInfo("Os Numeros: "+alltrim(STR(nInt,10,2))+" São Iguais","Resultado")    
+       
+		 Endif
+	 Return Nil
+************ Exercicio 5.4 ********************	 
+	 Function Exercicio54()
+***********************************************	    
+		 Local cNome:= space(40)
+	    Local nInt:=0
+	 
+	    MsgGet("Exercicio 5.4","Informe seu Nome: ",@cNome)
+	    MsgGet("Exercicio 5.4","Informe sua Indade: ",@nInt)
+	 
+	 
+	    If nInt >= 18
+	    MsgInfo(""+alltrim(cNome)+" Você é maior de Idade","Resultado")
+	    Else
+	    MsgInfo(""+alltrim(cNome)+" Você é menor de Idade","Resultado")
+		 Endif
+	 Return Nil
+**************Exercicio 5.5 *******************************	 
+    Function Exercicio55()
+*********************************************************** 	    
+		  Local nInt := 0
+	 
+	    MsgGet("Exercicio 5.5","Informe um numero",@nInt)	 	 
+	 
+	    If nInt % 2 = 0
+       MsgInfo("O Numero: "+alltrim(STR(nInt,10,0))+" é um numero par","Resultado")	  
+	    Else
+	    MsgInfo(nInt,"O Numero Impar") 
+	    Endif
+    Return Nil
+************ Exercicio 5.6 **************************    
+    Function Exercicio56()
+*****************************************************       
+		 Local nCodiCli:=[000]
+       Local nPrKlwts:=0.00
+       Local nQtdKlwts:=0
+       Local nTotalPagar:=0
+       Local nPagarMinimo:=21.30
+       Local nOpPamegamento:=0
+    
+       MsgGet("Exercicio 5.6","Informa o Codigo do Cliente: ", @nCodiCli)
+       MsgGet("Exercicio 5.6","Informa o Informar Preço de kilowatt: ",@nPrKlwts)
+       MsgGet("Exercicio 5.6","Informa a quantidade consumida de kilowatt: ",@nQtdKlwts)
+    
+       nTotalPagar:= nPrKlwts*nQtdKlwts
+    
+       MsgGet("Exercicio 5.6","Pagamento Total? Digite 1 Para Sim, 2 Para Não",@nOpPamegamento)
+    
+       If nOpPamegamento==1
+         MsgInfo("Codigo do Consumidor "+alltrim(nCodiCli)+""+CRLF+"Total a Pagar: "+alltrim(STR(nTotalPagar,10,2))+"","Resultado")
+       Elseif nOpPamegamento==2   
+         MsgInfo("Codigo do Consumidor "+alltrim(nCodiCli)+""+CRLF+"Pagamento Minimo: "+alltrim(STR(nPagarMinimo,10,2))+"","Resultado")
+       Else
+         MsgInfo("Opção de Pagamento Invalida Tente Novemente","Resultado")
+       Endif
+	 
+	 Return Nil
+	 
+	 
+	 
 		 
 		 
 		 
