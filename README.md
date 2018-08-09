@@ -1,32 +1,32 @@
 #Include"Fivewin.ch"
-*******************
+********************************************************************************
 Function main()
-*******************   
-    	Exercicio56()
-*******************
-return nil
+********************************************************************************   
+    	Exercicio58()
+********************************************************************************
+Return nil
 
-******* EXERCICIO 3.1 **********
+******* EXERCICIO 3.1 **********************************************************
     Function Exercicio31()
-********************************       
+********************************************************************************       
        Local nInt := 0.00
 
        MsgGet("Exercicio 3.1","Informe seu numero",@nInt)
        MsgInfo(nInt+5,"Resultado")
 
     Return Nil
-******* EXERCICIO 3.2 **********
+******* EXERCICIO 3.2 **********************************************************
     Function Exercicio32()
-********************************          
+********************************************************************************          
        Local nInt := 0.00
 
        MsgGet("Exercicio 3.2","Informe seu numero",@nInt)
        MsgInfo(nInt*2,"Resultado")
 
     Return Nil
-******* EXERCICIO 3.3 **********
+******* EXERCICIO 3.3 **********************************************************
     Function Exercicio33()
-********************************         
+********************************************************************************         
        Local nInt:= 0
        Local nInt2:= 0
        MsgGet("Exercicio 3.3","Informe a data de Nascimento Com 4 Digitos:",@nInt)
@@ -34,9 +34,9 @@ return nil
        MsgInfo(nInt2,"Sua Idade em 2012 era:","Idade")
 
     Return Nil
-******* EXERCICIO 3.4 *********
+******* EXERCICIO 3.4 **********************************************************
     Function Exercicio34()
-*******************************          
+********************************************************************************          
        Local nNota1:= 0
        Local nNota2:= 0
        Local nMedia:= 0
@@ -48,9 +48,9 @@ return nil
        MsgInfo(nMedia,"Sua Média Final é:")
     
     Return Nil
-******* EXERCICIO 3.5 **********
+******* EXERCICIO 3.5 **********************************************************
     Function Exercicio35()
-********************************
+********************************************************************************
        Local nRaio:=0
        Local nPi:=3.14
        Local nComprimento:=0
@@ -60,23 +60,57 @@ return nil
        MsgInfo(nComprimento,"O Coprimento total é de:")
        
     Return Nil
-******* EXERCICIO 3.6 ***********
+******* EXERCICIO 3.6 **********************************************************
     Function Exercicio36()
-*********************************
-
+********************************************************************************
+		 Local nArea:=0
+		 Local nBase:=0
+		 Local nAltura:=0
+		 
+		 MsgGet("Exercicio 3.6: ","Informe o Valor da Base: ",@nBase)
+		 MsgGet("Exercicio 3.6: ","Informe o Valor da Base: ",@nAltura)
+		 
+		 nArea:= (nBase*nAltura)/2
+		 
+		 MsgInfo("A Area do Triangulo é: "+alltrim(STR(nArea,10,2))+"","Resultado")
+		 
     Return Nil
-
+********** Exercicio 3.7 *******************************************************
     Function Exercicio37()
-
+********************************************************************************
+	    Local nFaren:= 0
+	    Local nCelsius:= 0
+	 
+	    MsgGet("Exercicio 3.7","Informe escala Fahrenheit",@nFaren)
+	 
+	    nCelsius:= (5/9)*(nFaren-32)
+	 
+	    MsgInfo("Temperatura na escala de Graus Celsius "+alltrim(STR(nCelsius,10,1))+"º","Resultado")
+	 
     Return Nil
 
     Function Exercicio38()
+       Local cNome:=space(40)
+       Local nNota1:=0
+       Local nNota2:=0
+       Local nNota3:=0
+       Local nMedia:=0
+    
+       MsgGet("Exercicio 3.8","Informe o Nome do Aluno: ",@cNome)
+       MsgGet("Exercicio 3.8","Informe A Primeira Nota: ",@nNota1)
+       MsgGet("Exercicio 3.8","Informe A Segunda Nota: ",@nNota2)
+       MsgGet("Exercicio 3.8","Informe A Terceira Nota: ",@nNota3)
+       
+       nMedia:= (nNota1+nNota2+nNota3)/3
+       
+       MsgInfo("Nome do ALuno: "+alltrim(cNome)+""+CRLF+"Primeira Nota:   "+alltrim(STR(nNota1,5,2))+""+CRLF+"Segunda Nota: "+alltrim(STR(nNota2,5,2))+""+CRLF+"Terceira Nota:    "+alltrim(STR(nNota3,5,2))+""+CRLF+"Media Final:      "+alltrim(STR(nMedia,5,2))+"","Resultado")
+       
 
     Return Nil
 
-*******  EXERCICIO 4.1 *********
+*******  EXERCICIO 4.1 *********************************************************
     Function Exercicio41()
-********************************
+********************************************************************************
     local nNumero1  
       nNumero1:= 0.00
        msgget("Exercicio 04.1","Informe o numero",@nNumero1,)
@@ -89,9 +123,9 @@ return nil
 
     Return nil 
 
-******* EXERCICIO 4.2 **********
+******* EXERCICIO 4.2 **********************************************************
     Function Exercicio42()
-********************************
+********************************************************************************
        Local kmInicial           
        Local kmFinal          
        Local qtdLtGasto         
@@ -123,9 +157,9 @@ return nil
        MsgInfo(STR((custoViagem),10,2),"Custo da viagem:")
     
 	 Return Nil                 
-******* EXERCICIO 4.3 **********       
+******* EXERCICIO 4.3 **********************************************************       
     Function Exercicio43 ()
-********************************
+********************************************************************************
        Local nHorasTrabalhadas:=0.00
        Local nValorHoraTrabalhada:=0.00
        Local nValorSalarioMinimo:=0.00
@@ -152,9 +186,9 @@ return nil
        MsgInfo(STR(nValorSalarioLiquido),5,2,"O Valor do Salario Liquido é:")  
        
     Return Nil
-******* EXERCICIO 4.4 ****************       
+******* EXERCICIO 4.4 **********************************************************       
     Function Exercicio44()
-**************************************       
+********************************************************************************       
        Local nCustoQuilowatt:=0.00
        Local nValorSalarioMinimo:=0.00
        Local nQtdQuilowattConsumo:=0.00
@@ -175,9 +209,9 @@ return nil
 		 MsgInfo(STR((nValorApagarDesc),5,2),"O valor a Ser Pago com Desconto é:")    
        
     Return Nil
-******* EXERCICIO 4.5 ****************       
+******* EXERCICIO 4.5 **********************************************************       
     Function Exercicio45()
-**************************************       
+********************************************************************************       
 		 Local cNomeVend:= Space(20)
        Local nNuCarrosVend:= 0
        Local nValorTotalVend:= 0
@@ -197,9 +231,9 @@ return nil
        MsgInfo("O FUNCIONARIO: "+alltrim(cNomeVend)+" RECEBERA O SALARIO DE: "+" RS "+alltrim(STR(nSalarioReceber),10,2),"EXERCICIO 4.5")
 		 
     Return Nil
-******* EXERCICIO 4.6 ******************		 
+******* EXERCICIO 4.6 **********************************************************		 
     Function Exercicio46()
-****************************************		 
+********************************************************************************		 
 		 Local nPrecoFabrica:=0
 		 Local nPercImporto:=0
 		 Local nPercLucroDist:=0
@@ -220,9 +254,9 @@ return nil
 		 MsgInfo(nValorFinalVeiculo,"O Preço Final do Veiculo é: ")
 		 
     Return Nil
-******* Exercicio 4.7 ****************
+******* Exercicio 4.7 **********************************************************
     Function Exercicio47()
-**************************************	 
+********************************************************************************	 
 	    Local nValorSalarioBruto:=0.00
 	    Local nDescInss:=0.00
 	    Local nDescIr:=0.00
@@ -238,9 +272,9 @@ return nil
 	 
 	 Return Nil    
        
-******* Exercicio 4.8 ***************
+******* Exercicio 4.8 **********************************************************
     Function Exercicio48()
-*************************************	    
+********************************************************************************	    
 		 Local nQtdChoc:=0	    
 	    Local nVlChoc:=0	    
 	    Local nQtdRefri:=0	    
@@ -265,9 +299,9 @@ return nil
 		 
 		 MsgInfo("Total Chocolate: R$"+alltrim(STR(nVlChoc,10,2))+""+CRLF+"Total Refrigerante: R$"+alltrim(STR(nVlRefri,10,2))+""+CRLF+"Total Misto Quente: R$"+alltrim(STR(nVlMistoQuente,10,2))+""+CRLF+"Total Sorvete: R$"+alltrim(STR(nVldSorteve,10,2))+""+CRLF+"Total Consumo: R$"+alltrim(STR(nValordaCompra,10,2))+""+CRLF," Resultado")
     Return Nil
-************* Exercicio 5.1 *****************     
+************* Exercicio 5.1 ****************************************************     
     Function Exercicio51()
-*********************************************       
+********************************************************************************       
 		 Local nInt := 0
 		 
 		 MsgGet("Exercicio 5.1","Informe um numero",@nInt)
@@ -283,9 +317,9 @@ return nil
 		 Endif    
        Endif
 	 Return Nil
-***************** Exercicio 5.2 *******************	 
+***************** Exercicio 5.2 ************************************************	 
 	 Function Exercicio52()
-***************************************************       
+********************************************************************************       
 		 Local nInt := 0
 		 
 		 MsgGet("Exercicio 5.2","Informe um numero",@nInt)
@@ -293,15 +327,12 @@ return nil
 		 
 		 MsgInfo("O Numero: "+alltrim(STR(nInt,10,2))+" É Positivo","Resultado")
 		
-		 Else 
-		 If nInt < 0
+		 Elseif  nInt < 0
 		 MsgInfo("O Numero: "+alltrim(STR(nInt,10,2))+" É Negativo","Resultado")
-		 Else
-		 If nInt ==0
+		 
+		 Elseif nInt ==0
 		 MsgInfo("O Numero: "+alltrim(STR(nInt,10,2))+" É Zero","Resultado")
-       
-		 Endif
-		 Endif    
+       		 		     
        Endif
 	 Return Nil
 *********** Exercicio 5.3 ****************	 
@@ -352,15 +383,14 @@ return nil
 	    MsgInfo(nInt,"O Numero Impar") 
 	    Endif
     Return Nil
-************ Exercicio 5.6 **************************    
+************ Exercicio 5.6 *****************************************************    
     Function Exercicio56()
-*****************************************************       
+********************************************************************************       
 		 Local nCodiCli:=[000]
        Local nPrKlwts:=0.00
        Local nQtdKlwts:=0
        Local nTotalPagar:=0
        Local nPagarMinimo:=21.30
-       Local nOpPamegamento:=0
     
        MsgGet("Exercicio 5.6","Informa o Codigo do Cliente: ", @nCodiCli)
        MsgGet("Exercicio 5.6","Informa o Informar Preço de kilowatt: ",@nPrKlwts)
@@ -368,23 +398,98 @@ return nil
     
        nTotalPagar:= nPrKlwts*nQtdKlwts
     
-       MsgGet("Exercicio 5.6","Pagamento Total? Digite 1 Para Sim, 2 Para Não",@nOpPamegamento)
-    
-       If nOpPamegamento==1
-         MsgInfo("Codigo do Consumidor "+alltrim(nCodiCli)+""+CRLF+"Total a Pagar: "+alltrim(STR(nTotalPagar,10,2))+"","Resultado")
-       Elseif nOpPamegamento==2   
-         MsgInfo("Codigo do Consumidor "+alltrim(nCodiCli)+""+CRLF+"Pagamento Minimo: "+alltrim(STR(nPagarMinimo,10,2))+"","Resultado")
+       If nTotalPagar > nPagarMinimo
+          MsgInfo("CODIGO CLIENTE: "+alltrim(nCodiCli)+""+alltrim(STR(nTotalPagar,10,2))+"","Resultado")
        Else
-         MsgInfo("Opção de Pagamento Invalida Tente Novemente","Resultado")
-       Endif
-	 
+          MsgInfo("CODIGO CLIENTE: "+alltrim(nCodiCli)+""+alltrim(STR(nPagarMinimo,10,2))+"","Resultado")
+	    Endif
+    Return Nil
+************ Exercicio *********************************************************	 
+	 Function Exercicio57()
+********************************************************************************	   
+		Local nVerba:=2000.00
+		Local nPassagem:=0 
+		Local nHospedagem:=0 
+		Local nAlimentacao:=0
+		Local nTotalGasto:=0
+		
+		MsgGet("Exercicio 5.7","Informe o Valor da Passagem: ",@nPassagem)
+		MsgGet("Exercicio 5.7","Informe o Valor da Hospedagem: ",@nHospedagem)
+		MsgGet("Exercicio 5.7","Informe o Valor da Alimentação: ",@nAlimentacao)
+		
+		nTotalGasto:= nPassagem+nHospedagem+nAlimentacao
+		
+		if nVerba >= nTotalGasto
+		   MsgInfo("Você Vai Brincar Carnaval")
+		Else
+		   MsgInfo("Fica em casa que seu dinheiro não dá pra brincar carnaval")	 
+      Endif
 	 Return Nil
+************ Exercicio 5.8 *****************************************************	    
+    Function Exercicio58()
+********************************************************************************    
+	 Local nTotalVenda:=0
+	 Local nCupom:=0
 	 
+	 MsgGet("Exercicio 5.8","Informe o Valor da Venda: ",@nTotalVenda) 
+	 nCupom:=(nTotalVenda)/20
+	 ?nCupom
 	 
-	 
+	 If (nCupom>1).AND.(nCupom<2)
+	        MsgInfo("Você Tem direito há: 1 cupom","Resposta")
+	 Elseif (nCupom<1)
+	        MsgInfo("Você não tem direito a cupom")
+	   elseif nCupom>=2
+		   MsgInfo("Você Tem Direito "+alltrim(STR(nCupom,10,0))+" Cupons","Resultado")
+	   Endif
+	 Return Nil  
+*********** Exercicio 5.9 *******************************
+    Function Exercicio59()
+*********************************************************	    
+		 Local nLado1:=0
+	    Local nLado2:=0
+	    Local nLado3:=0
+	    
+		 MsgGet("Exercicio 5.9: ","Informe o valor do 1° lado do triangulo: ",@nLado1)	       
+		 MsgGet("Exercicio 5.9: ","Informe o valor do 2º lado do triangulo: ",@nLado2)	       
+		 MsgGet("Exercicio 5.9: ","Informe o valor do 3º lado do triangulo: ",@nLado3)
 		 
 		 
+		 If  (nLado1>nLado2+nLado3).OR.(nLado2>nLado1+nLado3).OR.(nLado3>nLado1+nLado2)
+          MsgInfo("Triangulo Invalido a soma de dois lados é menor que o comprimento")
+		 Elseif (nLado1==nLado2) .AND. (nLado2 == nLado3)
+		    MsgInfo("Triangulo Equilatero Possui 3 lados iguais")
+		 Elseif ((nLado1==nLado2).OR.(nLado1==nLado3).OR.(nLado2==NLado3)).AND.((nLado1<>nLado2).OR.(nLado2<>nLado3).OR.(nLado1<>nLado3))
+		    MsgInfo("Triangulo Isosceles Possui apenas 2 Lados iguais")    
+       ElseIf (nLado1<>nLado2) .AND. (nLado2 <> nLado3)
+		    MsgInfo("Triangulo Escaleno Possui 3 lados Diferente")
+		 Endif
+	    Return Nil
 		 
-		 
-		 	    
-          
+************** Exercicio 6.0 ******************
+    Function Exercicio60()
+***********************************************	 	 
+	 If MsgYesNo("O Equipamento esta Funcionando")
+	 MsgInfo("Deixa como esta.","Voce não tem Problema.")
+
+	 ElseIF MsgYesNo("Voce, mexeu nele")
+	        MsgInfo("Voce não devia ter feito isso") 
+		        if MsgYesNo("Tem como Provar que a culpa não é sua")
+                 MsgInfo("Você não tem Problema.") 
+	           Else 
+				  MsgInfo("Agora Piorou! Mais você ainda tem uma chance")
+	                  If MsgYesNo("Alguem sabe que você mexeu")
+	                     MsgInfo("Relaxe! Mais cedo ou mais tarde você recebera a repreensão")
+                     Else
+							   MsgInfo("Tente Resolver ou Encotrar uma boa explicação Urgentemente") 
+	                  Endif 		     			  			  
+			     Endif	
+    Else 
+	    MsgInfo("Prepare-se! Alguem pode jogar a culpa em você") 
+         if MsgYesNo("Você sabe direitinho a causa do problema? ")
+            MsgInfo("Assim você não tera Problema.")
+	      Else
+		    MsgInfo("Torça para não sobrar pra você, mais continue se preparando.")
+         Endif
+	 Endif
+    Return 		 			 	       
